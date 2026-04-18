@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Money Exchange - Conversor de Moedas</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-section">
+                <div class="logo-circle">💱</div>
+                <div>
+                    <h1>Money Exchange</h1>
+                    <p>Converta moedas com facilidade</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="exchange-box">
+                <div class="input-section">
+                    <label>De</label>
+                    <select class="currency-select-to-convert">
+                        <option value="BRL">Real (BRL)</option>
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                    </select>
+                </div>
+
+                <div class="swap-button-container">
+                    <button class="swap-btn">⇄</button>
+                </div>
+
+                <div class="input-section">
+                    <label>Para</label>
+                    <select class="currency-select">
+                        <option value="USD">Dólar Americano (USD)</option>
+                        <option value="EUR">Euro (EUR)</option>
+                        <option value="GBP">Libra Esterlina (GBP)</option>
+                        <option value="BRL">Real (BRL)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="amount-section">
+                <label>Quanto você quer converter?</label>
+                <input class="input-currency" type="number" placeholder="0,00">
+            </div>
+
+            <button class="convert-button">Converter Agora</button>
+
+            <section class="result-section">
+                <div class="result-card from-card">
+                    <div class="result-header">
+                        <img class="currency-img-to-convert" src="./assets/real.png" alt="Real">
+                        <div>
+                            <p class="result-label">Você tem</p>
+                            <p class="currency-name" id="currency-name-to-convert">Real</p>
+                        </div>
+                    </div>
+                    <p class="currency-value-to-convert">R$ 0,00</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="result-card to-card">
+                    <div class="result-header">
+                        <img class="currency-img" src="./assets/dolar.png" alt="Dólar">
+                        <div>
+                            <p class="result-label">Você recebe</p>
+                            <p class="currency-name" id="currency-name">Dólar Americano</p>
+                        </div>
+                    </div>
+                    <p class="currency-value">US$ 0,00</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Taxas atualizadas diariamente</p>
+        </footer>
+    </div>
+</body>
+
+<script src="script.js"></script>
+
+</html>

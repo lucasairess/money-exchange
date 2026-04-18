@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-circle {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.exchange-box {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.input-section {
+    flex: 1;
+}
+
+.input-section label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 18px;
+    padding-right: 36px;
+}
+
+select:hover {
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.swap-button-container {
+    display: flex;
+    align-items: flex-end;
+    height: 44px;
+}
+
+.swap-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swap-btn:hover {
+    border-color: #667eea;
+    background: white;
+    color: #667eea;
+}
+
+.amount-section {
+    margin-bottom: 24px;
+}
+
+.amount-section label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-currency {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+.input-currency:hover {
+    border-color: #667eea;
+    background-color: #fff;
+}
+
+.input-currency:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: #fff;
+}
+
+.convert-button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.convert-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+}
+
+.result-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.result-card {
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.2s ease;
+}
+
+.result-card:hover {
+    border-color: #ddd;
+    background: #fff;
+}
+
+.from-card {
+    border-left: 4px solid #ffa500;
+}
+
+.to-card {
+    border-left: 4px solid #667eea;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.currency-img,
+.currency-img-to-convert {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.result-label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.currency-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.currency-value,
+.currency-value-to-convert {
+    font-size: 28px;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.arrow {
+    text-align: center;
+    font-size: 24px;
+    color: #ddd;
+    margin: 8px 0;
+}
+
+footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 24px 16px;
+    }
+
+    .exchange-box {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .swap-button-container {
+        height: auto;
+        justify-content: center;
+    }
+
+    .swap-btn {
+        transform: rotate(90deg);
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .currency-value,
+    .currency-value-to-convert {
+        font-size: 24px;
+    }
+}

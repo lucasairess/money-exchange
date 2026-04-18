@@ -8,7 +8,7 @@ Conversor de moedas simples e funcional.
 
 ## 📸 Preview
 
-![Money Exchange](./assets/Desafio JavaScript.png)
+![Money Exchange](./assets/Desafio%20JavaScript.png)
 
 ## 🎯 O que é?
 
